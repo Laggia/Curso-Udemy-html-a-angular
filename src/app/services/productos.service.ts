@@ -27,4 +27,8 @@ export class ProductosService {
         })
 
   }
+
+  public cargar_producto(cod: string){
+    return this.http.get(`https://paginaweb-fe4e4.firebaseio.com/productos/${ cod }.json`);
+  }
 }
